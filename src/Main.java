@@ -8,8 +8,8 @@ public class Main {
         while (total < 2_459_000) {
             total = total + salary;
             a++;
+            System.out.println("Месяц " + a + ", сумма накоплений равна " + total + " рублей.");
         }
-        System.out.println("Месяц " + a + ", сумма накоплений равна " + total + " рублей.");
         //Task 2
         System.out.println("Task 2");
         byte b = 1;
@@ -39,8 +39,9 @@ public class Main {
         int deposit = 0;
         short money = 15000;
         byte month = 1;
+        double percentage = 1.07;
         while (deposit <= 12_000_000) {
-            deposit = deposit + deposit *7/100;
+            deposit = (int) (deposit * percentage);
             deposit = deposit + money;
             month++;
             System.out.println("Месяц " + month + ", сумма накоплений равна " + deposit + " рублей.");
@@ -51,7 +52,7 @@ public class Main {
         short moneyFiveTask = 15000;
         byte monthFiveTask = 1;
         while (depositFiveTask <= 12_000_000) {
-            depositFiveTask = depositFiveTask + depositFiveTask *7/100;
+            depositFiveTask = (int) (depositFiveTask * percentage);
             depositFiveTask = depositFiveTask + moneyFiveTask;
             monthFiveTask++;
             if (monthFiveTask %6==0) {
@@ -64,7 +65,7 @@ public class Main {
         short moneySixTask = 15000;
         byte monthSixTask = 1;
         while (monthSixTask <= 108) {
-            depositSixTask = depositSixTask + depositSixTask *7/100;
+            depositSixTask = (int) (depositSixTask * percentage);
             depositSixTask = depositSixTask + moneySixTask;
             monthSixTask++;
             if (monthSixTask %6==0) {
